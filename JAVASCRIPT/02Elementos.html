@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02Elementos</title>
+
+    <script>
+        // Vetor de cidades
+        let cidades = ['Sao Paulo', 'Curitiba', 'Rio de Janeiro', 'Florianopolis', 'Trindade'];
+
+        // Ao carregar
+        window.onload = function(){
+            // Obter o elemento ul
+            let lista = document.getElementsByTagName('ul')[0];
+
+            // Laco de repeticao
+
+            for(let i = 0; i <cidades.length; i++){
+                // Criar o elemento li
+                let item = document.createElement('li');
+
+                // Adicionar texto do elemento li
+                item.innerText = cidades[i];
+
+                // Adicionar elemento li na lista
+                lista.appendChild(item);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Lista -->
+    <ul></ul>
+</body>
+</html>

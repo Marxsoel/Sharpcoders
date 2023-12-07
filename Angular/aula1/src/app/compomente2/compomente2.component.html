@@ -1,0 +1,35 @@
+<!-- 
+    PROPERTY BIND
+    ()  -> HTML chama uma funcao/variavel no arquivo TS
+    []  -> TS e enviar para o arquivo HTML
+    [()]-> 
+ -->
+
+ <!-- IF -->
+ <button (click)="visibilidadeTexto()">Clique aqui</button>
+ <p *ngIf="exibirTexto">Aprendendo a trabalhar com o ngIf</p>
+
+ <!-- TEMPLATE -->
+ <ng-template [ngIf]="exibirTexto">
+    <p>Texto dentro do template...</p>
+ </ng-template>
+
+ <!-- FOR -->
+ <ul *ngFor="let nome of nomes">
+    <li>{{nome}}</li>
+ </ul>
+
+ <!-- SWITCH -->
+<select [(ngModel)]="linguagem">
+    <option value=" ">Selecionar alguma linguagem</option>
+    <option value="C#">C#</option>
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+</select>
+
+ <ul [ngSwitch]="linguagem">
+     <li *ngSwitchCase="'C#'">C# e uma linguagem desenvolvida pela Microsoft</li>
+     <li *ngSwitchCase="'Java'">Java e uma linguagem que pertence a Oracle</li>
+     <li *ngSwitchCase="'Python'">Python  e uma linguagem muito rapida</li>
+     <li *ngSwitchDefout="''">Informe uma linguagem</li>
+</ul>
