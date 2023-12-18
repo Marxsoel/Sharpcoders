@@ -1,0 +1,8 @@
+Criar componente de aluno
+ng g c componentes/aluno
+
+Criar servico de aluno
+ng g s servicos/aluno
+
+Executar projeto
+ng s
